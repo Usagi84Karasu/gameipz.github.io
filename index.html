@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Game Studio — Crée & Publie des jeux</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Game Studio 🔨🤖🔧</h1>
+      <div id="auth-area">
+        <div id="user-info" class="hidden">
+          <span id="username"></span>
+          <button id="logoutBtn">Logout</button>
+        </div>
+        <div id="login-area">
+          <input id="login-username" placeholder="Nom d'utilisateur" />
+          <input id="login-password" type="password" placeholder="Mot de passe" />
+          <button id="loginBtn">Login</button>
+          <button id="registerBtn">Register</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Créer un jeu</h2>
+        <input id="game-title" placeholder="Titre du jeu" />
+        <input id="game-desc" placeholder="Courte description (optionnel)" />
+        <textarea id="game-html" placeholder="Colle ici ton HTML complet (index.html) — tu peux inclure CSS & JS inline"></textarea>
+        <div class="row">
+          <button id="createGameBtn">Créer (sauvegarder)</button>
+        </div>
+        <small>Astuce : colle une page HTML complète (doctype, head, body) ou juste un fragment — on l'enregistrera dans index.html.</small>
+      </section>
+
+      <section class="panel">
+        <h2>Jeux publics</h2>
+        <div id="gamesList">Chargement…</div>
+      </section>
+
+      <section class="panel">
+        <h2>Prévisualiser</h2>
+        <div id="previewArea">Sélectionne un jeu pour le prévisualiser.</div>
+      </section>
+    </main>
+
+    <footer>© Game Studio — exemple minimal</footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
